@@ -33,7 +33,7 @@ class Main extends PluginBase {
     public function onEnable(): void {
         $this->saveDefaultConfig();
         
-        $this->crystalConfig = new Config($this->getDataFolder() . "glass.yml", Config::YAML);
+        $this->glassConfig = new Config($this->getDataFolder() . "glass.yml", Config::YAML);
         $this->loadGlassPositions();
         
         $this->getServer()->getCommandMap()->register("squidgame", new GlassCommand($this));
